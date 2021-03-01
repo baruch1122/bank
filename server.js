@@ -63,7 +63,7 @@ app.post('/bank', async function (req, res) {
             companyId: req.body.bank, // mandatory; one of 'hapoalim', 'hapoalimBeOnline', leumi', 'discount', 'mizrahi', 'otsarHahayal', 'visaCal', 'max', 'isracard', 'amex'
             startDate: new Date(req.body.year, req.body.month + 1, req.body.day + 1), // the date to fetch transactions from (can't be before the minimum allowed time difference for the scraper)
             combineInstallments: `true`, // if set to true, all installment transactions will be combine into the first one
-            showBrowser: `true`, // shows the browser while scraping, good for debugging (default false)
+            showBrowser: `false`, // shows the browser while scraping, good for debugging (default false)
             verbose: `true`, // include more debug info about in the output
             //browser : Browser, // optional option from init puppeteer browser instance outside the libary scope. you can get browser diretly from puppeteer via `puppeteer.launch()` command.
             //executablePath: string // optional. provide a patch to local chromium to be used by puppeteer. Relevant when using `israeli-bank-scrapers-core` library 
