@@ -93,6 +93,11 @@ app.post('/bank', async function (req, res) {
     }
 })
 
-app.listen(1000, function () {
 
+app.get('/', (req,res)=>{
+    res.send("blah i'm working")
+})
+
+app.listen(1000, function () {
+console.log("run on prot 1000");
 })
